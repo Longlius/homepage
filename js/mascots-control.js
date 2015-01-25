@@ -36,4 +36,11 @@ $(document).ready(function(event) {
         setMascot(mascot);
         controlMascot(mascot, mascotMinWidth);
     } else { removeMascot(); }
+    
+    // DEVLINKSEL   -   CSS selector for dev docs link
+    var DEVLINKSEL = '.columnList > .column > ul > #devref';
+    // Locate parent node of dev docs link in DOM
+    var parentOfDevDocsLink = document.querySelector(DEVLINKSEL);
+    // Replace child with proper dev link
+    parentOfDevDocsLink.replaceChild(genDevLinkNode(), parentOfDevDocsLink.firstChild);
 });
