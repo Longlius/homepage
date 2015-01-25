@@ -43,4 +43,9 @@ $(document).ready(function(event) {
     var parentOfDevDocsLink = document.querySelector(DEVLINKSEL);
     // Replace child with proper dev link
     parentOfDevDocsLink.replaceChild(genDevLinkNode(), parentOfDevDocsLink.firstChild);
+    
+    // If something went wrong, display error message with alert
+    if(error_p){
+        alert(error_m);
+    }
 });
